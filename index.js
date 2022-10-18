@@ -114,6 +114,18 @@ var spiderMan = {
 	]
 }
 
+var favoritePlaces = {
+	"loc1":"41.8326,-87.7285",
+	"loc2":"43.653,-79.383",
+	"loc3":"35.676,139.650"
+}
+
+app.get('/favoriteplaces', (request, response) => {
+	console.log('Calling "/favoriteplaces" on the Node.js server.')
+	response.type('application/json')
+	response.send(JSON.stringify(favoritePlaces, null, 4))
+})
+
 app.get('/batman', (request, response) => {
 	console.log('Calling "/batman" on the Node.js server.')
 	response.type('application/json')
